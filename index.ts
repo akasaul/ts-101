@@ -9,11 +9,13 @@ interface Todo {
   completed: boolean;
 }
 
-
 axios.get(url)
 .then(res => {
+    // typed as todo 
     const todo = res.data as Todo;
-    
+
+    // todo.someProp  = throws an erorr
+
     const id = todo.id;
     const title = todo.title;
     const completed = todo.completed;
